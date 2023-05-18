@@ -180,9 +180,15 @@ Here are some method(external):-
 
 1. add
 2. remove
-3. union
-4. intersection
-5. difference_update"""
+3. discard
+4. union
+5. intersection
+6. difference
+7. difference_update
+8. clear()
+9. issubset()
+10. issuperset()
+"""
 
 ## add
 
@@ -196,6 +202,16 @@ Here are some method(external):-
 # num = {11, 22, 33, 44, 55}
 # num.remove(22)
 # print(num)
+
+## discard
+'''
+This discard method removes an element from the set if it si a member,
+if the element is not a member, nothing happens.
+'''
+# num = {11, 22, 33, 44, 55}
+# num.discard(22)
+# print(num)
+
 
 
 ## union
@@ -212,7 +228,23 @@ Here are some method(external):-
 # num2 = {33, 44, 66, 77}
 # print(num1.intersection(num2))
 
+## difference
 
+# num1 = {11, 22, 33, 44, 55}
+# num2 = {33, 44, 66, 77}
+# print(num1.difference(num2))
+
+
+## pop
+'''
+Works as FIFO.
+The pop() method removes and returns the arbitrary element from the set.
+Raises KeyError if the set is empty
+'''
+# a = {1, 2, 3}
+# x = a.pop()
+# print(x)
+# print(a)
 
 ## difference_update
 
@@ -220,6 +252,25 @@ Here are some method(external):-
 # num2 = {'ramesh', 'pradeep', 'harshit'}
 # print(num1.difference_update(num2))
 
+
+## clear
+'''
+The clear() method removes all items from the set.
+'''
+# s = {1, 2, 3}
+# s.clear()
+
+
+## issubset
+'''
+The issubset method returns True if all element from the set if are
+present in another set(the argument), False otherwise.
+'''
+# a = {1, 2, 3}
+# b = {1, 2, 3, 4, 5}
+# c = {1, 2, 4}
+# print(a.issubset(b))
+# print(a.issubset(c))
 
 ##9. Python Dictionary
 """
